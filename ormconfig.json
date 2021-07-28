@@ -9,9 +9,9 @@
    "logging": true,
    "entities": ["src/entity/**/*.ts"],
    "migrations": [
-      "build/migration/*.js"
+      "src/migration/**/*.ts"
     ],
-        "subscribers": ["src/subscriber/**/*.ts"],
+   "subscribers": ["src/subscriber/**/*.ts"],
     "cli": {
       "entitiesDir": "src/entity",
       "migrationsDir": "src/migration",
