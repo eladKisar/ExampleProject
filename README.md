@@ -1,0 +1,1 @@
+for run migration exexc the command - npm run typeorm  migration:generate -- -n Test
