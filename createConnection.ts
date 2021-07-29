@@ -6,7 +6,7 @@ dotenv.config()
 export let dbOptions: ConnectionOptions = {
     type: process.env.DB_CONNECTION as any,
     host: process.env.DB_HOST,
-    port: process.env.DB_PORT as any,
+    port: parseInt(process.env.DB_PORT, 5000),
     username:process.env.DB_USERNAME,
     password:process.env.DB_PASSWORD,
     database: process.env.DB_NAME,
