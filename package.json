@@ -20,9 +20,7 @@
       "mysql": "^2.18.1",
       "reflect-metadata": "^0.1.13",
       "typeorm": "^0.2.34",
-      "uuid": "^8.3.2"
-   },
-   "devDependencies": {
+      "uuid": "^8.3.2",
       "@types/node": "^8.10.66",
       "nodemon": "^2.0.12",
       "ts-node": "^10.1.0",
