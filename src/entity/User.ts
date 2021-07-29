@@ -1,7 +1,7 @@
 import { IsEmail, IsEnum, Length } from "class-validator";
 import { Entity, Column, OneToMany} from "typeorm";
 import Model from './Model';
-import { Post } from './Post';
+import  Post  from './Post';
 
 enum RoleType {
     USER = 'user',
@@ -10,7 +10,7 @@ enum RoleType {
 }
 
 @Entity("users")
-export class User extends Model {
+export default class User extends Model {
 
     @Column()
     @Length(1,255)

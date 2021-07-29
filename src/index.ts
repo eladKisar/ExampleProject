@@ -1,8 +1,8 @@
 import "reflect-metadata";
 import { createConnection } from "typeorm";
-import { User } from "./entity/User";
+import  User  from "./entity/User";
 import express = require('express');
-import { Post } from "./entity/Post";
+import  Post  from "./entity/Post";
 import { validate } from "class-validator";
 
 const app = express();
@@ -130,6 +130,7 @@ app.get('/posts', async (req: any, res: any) => {
 
 createConnection()
   .then(async connection => {
-    app.listen(5000, () => console.log('listening on port 5000'));
+    var port = process.env.PORT || 5000;
+    app.listen(port, () => console.log(`listening on port ${port}`));
 
   }).catch(error => console.log(error));
