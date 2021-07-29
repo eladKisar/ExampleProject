@@ -4,6 +4,7 @@ import  User  from "./entity/User";
 import express = require('express');
 import  Post  from "./entity/Post";
 import { validate } from "class-validator";
+import * as appConfig from '../createConnection';
 
 const app = express();
 app.use(express.json());
@@ -128,8 +129,7 @@ app.get('/posts', async (req: any, res: any) => {
 })
 
 
-createConnection()
-  .then(async connection => {
+createConnection(appConfig.dbOptions).then(async connection => {
     var port = process.env.PORT || 5000;
     app.listen(port, () => console.log(`listening on port ${port}`));
 
